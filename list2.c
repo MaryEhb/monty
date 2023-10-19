@@ -74,3 +74,15 @@ void swap(stack_t **stack, unsigned int n)
 	
 
 }
+
+/**
+ * nop - nop
+ * @stack: stack
+ * @n: n
+ * Return: Nothing
+ */
+
+void nop(stack_t **stack, unsigned int n)
+{
+	return;
+}
