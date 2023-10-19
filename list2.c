@@ -44,3 +44,33 @@ void pop(stack_t **stack, unsigned int n)
 	free(tmp);
 
 }
+
+/**
+ * swap - swap
+ * @stack: stack
+ * @n: n
+ * Return: Nothing
+ */
+
+void swap(stack_t **stack, unsigned int n)
+{
+	stack_t *tmp;
+
+	if (!stack || !(*stack) || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't %s, stack too short\n", n);
+		free_list();
+		exit(EXIT_FAILURE);
+	}
+
+	tmp = (*stack)->next;
+	(*stack)->next = tmp->next;
+	if (tmp->next)
+		tmp->next->prev = *stack;
+	tmp->next = *stack;
+	(*stack)->prev = tmp;
+	tmp->prev = NULL;
+	*stack = tmp;
+	
+
+}
