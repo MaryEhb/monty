@@ -76,7 +76,7 @@ void push(stack_t **new_node,  __attribute__((unused))unsigned int n)
  * Return: NOthing
  */
 
-void push_queue(stack_t **new_node)
+void push_queue(stack_t **new_node,  __attribute__((unused))unsigned int n)
 {
 	stack_t *tmp;
 

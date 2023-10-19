@@ -124,7 +124,7 @@ void call_func(op_func func, char *opcode, char *value, int n, int format)
 		if (format == 0)
 			push(&node, n);
 		if (format == 1)
-			push_queue(&node);
+			push_queue(&node, n);
 
 	}
 	else
