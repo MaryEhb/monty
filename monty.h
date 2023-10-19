@@ -51,5 +51,10 @@ void call_func(op_func, char *, char *, int, int);
 stack_t *create_node(int n);
 void push(stack_t **, unsigned int);
 void printall(stack_t **, unsigned int);
+void pint(stack_t **, unsigned int);
+void pop(stack_t **, unsigned int);
+void swap(stack_t **, unsigned int);
+void add_op(stack_t **, unsigned int);
+void nop(stack_t **, unsigned int);
 
 #endif

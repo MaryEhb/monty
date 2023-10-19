@@ -66,12 +66,13 @@ int parse_line(char *buffer, int n, int format)
 
 void get_func(char *opcode, char *value, int n, int format)
 {
-	instruction_t func_list[] = {{"push", push}, {"pall", printall}};
+	instruction_t func_list[] = {{"push", push}, {"pall", printall},
+		{"pint", pint}};
 	int flag = 1, i = 0;
 
 	if (opcode[0] == '#')
 		return;
-	while (i < 2)
+	while (i < 3)
 	{
 		if (strcmp(opcode, func_list[i].opcode) == 0)
 		{
