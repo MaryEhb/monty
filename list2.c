@@ -71,8 +71,6 @@ void swap(stack_t **stack, unsigned int n)
 	(*stack)->prev = tmp;
 	tmp->prev = NULL;
 	*stack = tmp;
-	
-
 }
 
 /**
@@ -86,8 +84,6 @@ void nop(stack_t **stack, unsigned int n)
 {
 	(void) stack;
 	(void) n;
-
-	return;
 }
 
 /**
@@ -103,7 +99,7 @@ void add_op(stack_t **stack, unsigned int n)
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
-		
+
 		fprintf(stderr, "L%d: can't add, stack too short\n", n);
 		free_list();
 		exit(EXIT_FAILURE);
