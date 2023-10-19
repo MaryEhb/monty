@@ -70,6 +70,32 @@ void push(stack_t **new_node,  __attribute__((unused))unsigned int n)
 }
 
 /**
+ * push_queue - push_queue
+ * @new_node: node
+ * @n: n
+ * Return: NOthing
+ */
+
+void push_queue(stack_t **new_node)
+{
+	stack_t *tmp;
+
+	if (!new_node || !(*new_node))
+		exit(EXIT_FAILURE);
+	if (!head)
+	{
+		head = *new_node;
+		return;
+	}
+
+	tmp = head;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = *new_node;
+	(*new_node)->prev = tmp;
+}
+
+/**
  * printall - print
  * @stack: Pointer to stack
  * @n: n

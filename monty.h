@@ -50,6 +50,7 @@ void call_func(op_func, char *, char *, int, int);
 
 stack_t *create_node(int n);
 void push(stack_t **, unsigned int);
+void push_queue(stack_t **new_node);
 void printall(stack_t **, unsigned int);
 void pint(stack_t **, unsigned int);
 void pop(stack_t **, unsigned int);

@@ -122,7 +122,9 @@ void call_func(op_func func, char *opcode, char *value, int n, int format)
 
 		node = create_node(atoi(value) * flag);
 		if (format == 0)
-			func(&node, n);
+			push(&node, n);
+		if (format == 1)
+			push_queue(&node);
 
 	}
 	else
