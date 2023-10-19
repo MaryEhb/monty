@@ -10,7 +10,7 @@ void read_file(char *fn)
 {
 	FILE *fd = fopen(fn, "r");
 	int n = 1, format = 0;
-	char buffer[1000];
+	char buffer[10000];
 	size_t len = 1000;
 
 	if (!fn || !fd)
